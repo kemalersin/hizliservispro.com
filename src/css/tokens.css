@@ -1,0 +1,67 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --surface: #ffffff;
+  --ink: #111111;
+  --ink-soft: #6b7280;
+  --ink-mute: #9ca3af;
+  --line: #e5e7eb;
+  --line-strong: #d1d5db;
+  --cta: #111111;
+  --cta-hover: #000000;
+  --focus: #111111;
+  --on-cta: #ffffff;
+
+  --mint: #d8f5de;
+  --butter: #f6e38a;
+  --powder: #d9e8f8;
+  --peach: #f8d7c4;
+  --glow: #c7ddff;
+
+  --font-display: "Fraunces", "Source Serif 4", "Iowan Old Style", serif;
+  --font-ui: "Outfit", "Plus Jakarta Sans", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-hero: clamp(2.25rem, 4.6vw, 4rem);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  --glass: color-mix(in srgb, #ffffff 64%, transparent);
+  --glass-strong: color-mix(in srgb, #ffffff 78%, transparent);
+  --glass-edge: color-mix(in srgb, #ffffff 72%, transparent);
+  --glass-blur: 18px;
+  --glass-saturate: 165%;
+
+  --shadow-card: 0 16px 40px rgba(17, 17, 17, 0.08), 0 2px 8px rgba(17, 17, 17, 0.04);
+  --shadow-nav: 0 10px 36px rgba(17, 17, 17, 0.08), 0 1px 0 rgba(255, 255, 255, 0.75) inset;
+  --shadow-float: 0 18px 44px rgba(17, 17, 17, 0.12), 0 1px 0 rgba(255, 255, 255, 0.55) inset;
+  --shadow-lift: 0 26px 52px rgba(17, 17, 17, 0.14), 0 8px 16px rgba(17, 17, 17, 0.05);
+  --shadow-phone: 0 28px 64px rgba(17, 17, 17, 0.28), 0 10px 22px rgba(17, 17, 17, 0.14);
+  --shadow-cta: 0 10px 22px rgba(17, 17, 17, 0.18);
+
+  --wrap: 1120px;
+  --header-h: 88px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  color-scheme: light;
+}
