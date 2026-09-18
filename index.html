@@ -50,17 +50,19 @@
       <div class="wrap">
         <div class="nav-pill">
           <a class="brand" href="#ust">
-            <img src="/images/logo.svg" width="28" height="28" alt="" />
+            <img src="/images/logo.svg" width="30" height="30" alt="" />
             <span>Hızlı Servis Pro</span>
           </a>
 
           <nav class="nav-links" aria-label="Sayfa">
-            <a href="#cozum">Çözüm</a>
-            <a href="#nasil">Nasıl çalışır</a>
-            <a href="#ozellikler">Özellikler</a>
-            <a href="#sektorler">Sektörler</a>
-            <a href="#mobil">Mobil</a>
-            <a href="#demo">Demo</a>
+            <div class="nav-links__in">
+              <a href="#cozum">Çözüm</a>
+              <a href="#nasil">Nasıl çalışır</a>
+              <a href="#ozellikler">Özellikler</a>
+              <a href="#sektorler">Sektörler</a>
+              <a href="#mobil">Mobil</a>
+              <a href="#demo">Demo</a>
+            </div>
           </nav>
 
           <div class="nav-actions">
@@ -73,26 +75,12 @@
               >
                 Giriş
               </button>
-              <div class="login__menu" id="login-menu" hidden>
-                <a href="https://hizliservispro.com/panel">
-                  Üretici paneli
-                  <small>/panel</small>
-                </a>
-                <a href="https://hizliservispro.com/bayi">
-                  Bayi portalı
-                  <small>/bayi</small>
-                </a>
-                <a href="https://hizliservispro.com/siparis">
-                  Sipariş
-                  <small>/siparis</small>
-                </a>
-              </div>
             </div>
             <a class="btn btn-primary" href="#demo">Demo talep et</a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menüyü aç">
-              <span></span>
-            </button>
           </div>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menüyü aç">
+            <span></span>
+          </button>
         </div>
       </div>
     </header>
@@ -104,10 +92,12 @@
           <h1>Satış sonrası işiniz için<br /><em>Hızlı Servis Pro</em></h1>
           <div class="lede">
             <p>
-              Bayileriniz araç satınca garanti kaydı oluşsun, serviste bakım ve arıza fişi açılsın,
-              yedek parça siparişi üreticiye ulaşsın istiyorsanız bu sistem onun için. Motosiklet ve
-              e-bisiklet üreticileri kadar tarım aracı üreticileri de kullanıyor; şasi veya seri
-              numarasıyla ürün izlenen, yetkili ağın olduğu başka sektörlere de uyarlanıyor.
+              Satıştan servise, servisten yedek parçaya kadar tüm süreci tek yerden yönetin.
+              Bayi aracı sattığında garanti kaydı oluşsun, servis bakım veya arıza fişini açsın,
+              yedek parça siparişi üreticiye doğrudan iletilsin. Sistem bugün motosiklet,
+              e-bisiklet ve tarım aracı üreticileri tarafından kullanılıyor; şasi veya
+              seri numarasıyla ürün takibi yapılan ve yetkili bayi-servis ağı bulunan farklı
+              sektörlere de uyarlanabiliyor.
             </p>
           </div>
           <div class="hero-ctas">
@@ -117,27 +107,13 @@
                 class="btn btn-secondary login__btn"
                 type="button"
                 aria-expanded="false"
-                aria-controls="hero-login-menu"
+                aria-controls="login-menu"
               >
                 Giriş
               </button>
-              <div class="login__menu" id="hero-login-menu" hidden>
-                <a href="https://hizliservispro.com/panel">
-                  Üretici paneli
-                  <small>/panel</small>
-                </a>
-                <a href="https://hizliservispro.com/bayi">
-                  Bayi portalı
-                  <small>/bayi</small>
-                </a>
-                <a href="https://hizliservispro.com/siparis">
-                  Sipariş
-                  <small>/siparis</small>
-                </a>
-              </div>
             </div>
           </div>
-          <p class="hero-note">Kuruluma birlikte bakıyoruz; uygunsa firmanız açılıyor.</p>
+          <p class="hero-note">Kurulumu birlikte yapıyoruz. Uygunsa firmanız açılıyor.</p>
         </div>
 
         <div class="wrap hero-stage">
@@ -237,19 +213,27 @@
         <p class="shot-caption hero-caption">Şasi ile geçmiş; sahada kupon.</p>
 
         <div class="wrap hero-proof">
-          <p>Bu işi yürüten üreticilerden bazıları</p>
+          <p>Bizi tercih eden üreticilerden bazıları</p>
           <ul class="wordmarks" role="list">
             <li>
-              <img src="/images/arora-logo.png" width="268" height="36" alt="Arora" />
+              <a href="https://arora.com.tr/" target="_blank" rel="noopener noreferrer">
+                <img src="/images/arora-logo.png" width="268" height="36" alt="Arora" />
+              </a>
             </li>
             <li>
-              <img src="/images/bolat-logo.png" width="800" height="160" alt="Bolat" />
+              <a href="https://www.beybolat.com.tr/" target="_blank" rel="noopener noreferrer">
+                <img src="/images/bolat-logo.png" width="800" height="160" alt="Bolat" />
+              </a>
             </li>
             <li>
-              <img src="/images/akeso-logo.png" width="512" height="100" alt="Akeso" />
+              <a href="https://www.akesomotors.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/images/akeso-logo.png" width="512" height="100" alt="Akeso" />
+              </a>
             </li>
             <li>
-              <img src="/images/rebat-logo.svg" width="420" height="50" alt="Rebat" />
+              <a href="https://rebatmotor.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/images/rebat-logo.svg" width="420" height="50" alt="Rebat" />
+              </a>
             </li>
           </ul>
         </div>
@@ -268,12 +252,12 @@
                 <p class="eyebrow">01</p>
                 <h3>Kupon kâğıtta kalınca ağ dağılır</h3>
                 <p>
-                  Satışta kesilen belgeler çekmecede, Excel’de veya bayinin WhatsApp’ında duruyorsa
-                  üretici hangi şasinin garantide olduğunu geç öğrenir. Hızlı Servis Pro’da kupon
-                  dijitaldir: satıcı, alıcı, model, şasi ve garanti başlangıcı aynı kayıttadır.
-                  İsterseniz markanıza özel garanti belgesi ve ilk bakım kuponu da bu kayıttan
-                  basılır. Kupon, satışta kesilen dijital garanti ve araç kaydıdır; indirim kodu
-                  değildir.
+                  Satış belgeleri çekmecede, Excel’de veya bayinin WhatsApp’ında kalıyorsa
+                  üretici hangi aracın garantide olduğunu zamanında göremez.
+                  Hızlı Servis Pro’da kupon dijitaldir; satıcı, alıcı, model, şasi ve
+                  garanti başlangıcı tek kayıtta tutulur. İsterseniz markanıza özel garanti
+                  belgesi ve ilk bakım kuponunu da bu kayıttan yazdırabilirsiniz.
+                  Kupon, indirim kodu değil; satışla birlikte oluşan dijital garanti ve araç kaydıdır.
                 </p>
               </div>
               <div class="scene-visual">
@@ -286,11 +270,11 @@
                 <p class="eyebrow">02</p>
                 <h3>Aynı parça ikinci kez yazılmasın</h3>
                 <p>
-                  Garanti talebine takılan yedek parçanın o araçta daha önce kullanılıp
-                  kullanılmadığı, özellikle suistimali pahalıya patlayan ağlarda kritik. Sistem,
-                  firmanız bu kontrolü açtıysa aynı kupon üzerindeki eski taleplere bakar;
-                  kullanılmış parça varsa kaydı durdurup onay ister. Parça takibiyle hangi parçanın
-                  hangi fişte gittiği de sonra sorulabilir.
+                  Garanti talebindeki bir parçanın o araçta daha önce kullanılıp kullanılmadığını bilmek önemli.
+                  Özellikle suistimalin maliyeti yüksekse bu kontrol daha da önemli hale geliyor.
+                  Sistem, bu kontrolü açtığınızda aracın eski taleplerine bakıyor; parça daha önce kullanılmışsa
+                  kaydı durdurup onay istiyor. Hangi parçanın hangi fişte kullanıldığını da sonradan
+                  görebiliyorsunuz.
                 </p>
               </div>
               <div class="scene-visual">
@@ -303,11 +287,11 @@
                 <p class="eyebrow">03</p>
                 <h3>Talep, stok ve sipariş ayrı defter olmasın</h3>
                 <p>
-                  Servis fişindeki parça listesi bir yerde, stok başka ekranda, sipariş telefonla
-                  yürüyorsa sevk gecikir. Burada talep veya bakımdan sepet oluşur, stok model /
-                  bölge / il / cari katmanında görünür, ön sipariş açılabiliyorsa stokta olmayan
-                  kalem de düşer. Ticari yazılımınız varsa (örneğin Logo ERP) stok giriş–çıkışı
-                  orayla konuşacak şekilde kurulabilir.
+                  Servis fişindeki parça listesi bir yerde, stok başka ekranda, sipariş telefonla yürüyorsa
+                  işler uzar. Burada talep veya bakımdan doğrudan sepet oluşur, stok model, bölge, il ve
+                  cari bazında görünür. Ön sipariş açıksa stokta olmayan parçalar da siparişe eklenir.
+                  Logo ERP gibi ticari yazılımlar kullanıyorsanız stok giriş-çıkışları onunla entegre
+                  çalışacak şekilde kurulabilir.
                 </p>
               </div>
               <div class="scene-visual">
@@ -346,9 +330,9 @@
             <p class="eyebrow">Nasıl çalışır</p>
             <h2>Üretici ağı, bayi işi, onay ve sevk</h2>
             <p>
-              Kurulumda üretici kendi ağını tanımlar. Günlük iş bayide ve sahadaki mobilde yürür;
-              üretici onaylar, stoğu görür, sevki takip eder. Kupon kesimi, bakım fişi, garanti
-              talebi ve yedek parça siparişi bu sırayla bağlanır.
+              Kurulumda üretici kendi bayi ve servis ağını tanımlar. Günlük işler bayi ve sahadaki
+              mobil ekip tarafından yürütülür; üretici onaylar, stoğu görür ve sevki takip eder.
+              Kupon, bakım fişi, garanti talebi ve yedek parça siparişi de bu akışın içinde birbirine bağlanır.
             </p>
           </div>
           <ol class="steps">
@@ -356,11 +340,10 @@
               <span class="step-index">01</span>
               <h3>Üretici</h3>
               <p>
-                Firmanızı açıyoruz. Markalar, modeller, yedek parça kataloğu, cariler (satış,
-                servis, yedek parça veya 3S) ve kullanıcı yetkileri buradan girilir. Garanti belgesi
-                şablonu, para birimi, stokun bayiye görünüp görünmeyeceği, WhatsApp karşılama metni
-                gibi kurallar firma ayarıdır. Terminolojiyi de değiştirebilirsiniz; ekrandaki
-                “kupon” veya “cari” sizin iç dilinize çekilir.
+                Firmanızı açıyoruz. Markalar, modeller, yedek parça kataloğu, cariler ve kullanıcı
+                yetkileri buradan tanımlanır. Garanti belgesi şablonu, para birimi, stokun bayiye görünmesi,
+                WhatsApp karşılama metni gibi kurallar da firma ayarlarından belirlenir. İsterseniz
+                “kupon” veya “cari” gibi terimleri kendi kullandığınız ifadelerle değiştirebilirsiniz.
               </p>
               <figure class="shot" aria-label="Bayi ağı ve yetkiler — temsili arayüz">
                 <div class="ui ui--desk ui--ag" aria-hidden="true">
@@ -389,10 +372,10 @@
               <span class="step-index">02</span>
               <h3>Bayi ve saha</h3>
               <p>
-                Yetkili nokta şasi veya seri no ile aracı bulur, satıcı–alıcı kuponunu keser, ilk
-                montajı ve periyodik bakımı km ile kaydeder. Garanti içindeyse talep açar: hata
-                tipi, arıza nedeni, parça, fotoğraf; ayarı açıksa video. Aynı iş, firmanıza göre
-                giydirilmiş mobilde de yürür — sahadaki teknisyen paneli açmak zorunda kalmaz.
+                Yetkili nokta şasi veya seri no ile aracı bulur, satıcı ve alıcı bilgileriyle kuponu keser,
+                ilk montajı ve periyodik bakımları km bilgisiyle kaydeder. Garanti kapsamındaysa hata tipi,
+                arıza nedeni, parça, fotoğraf ve videoyla talep açar. Aynı işlemler, firmanıza özel mobil
+                uygulamadan da yapılabilir; sahadaki teknisyen panelle uğraşmaz.
               </p>
               <figure class="shot" aria-label="Bayi bakım kaydı — temsili arayüz">
                 <div class="ui ui--phone ui--mbakim" aria-hidden="true">
@@ -402,8 +385,7 @@
                     <div class="ui__field">Km</div>
                     <div class="ui__rows">
                       <div class="ui__row"><em class="mint"></em><b>İlk montaj</b></div>
-                      <div class="ui__row"><em></em><b>1. bakım</b></div>
-                      <div class="ui__row"><em class="butter"></em><b>2. bakım</b></div>
+                      <div class="ui__row"><em></em><b>1. bakım</b><b class="w2">1.000 km</b></div>
                     </div>
                     <div class="ui__cta">Kaydet</div>
                   </div>
@@ -414,10 +396,11 @@
               <span class="step-index">03</span>
               <h3>Onay ve sevk</h3>
               <p>
-                Fişler Oluşturuldu → Onay bekliyor → Onaylandı veya İptal. Onay yetkisi olan
-                kullanıcı kaydı inceler; ardından yedek parça siparişi ve sevk etkinlikleri (sevk,
-                iptal vb.) aynı zincirde kalır. Alıcıya garanti başlangıcı gibi mesajlar WhatsApp
-                ile gidebilir. Cari ekstre Excel’e alınır.
+                Fişler Oluşturuldu → Onay Bekliyor → Onaylandı veya İptal. Yetkili kullanıcı
+                kaydı inceler ve onaylar. Yedek parça siparişi ile sevk, iptal gibi işlemler de
+                aynı kayıt üzerinden takip edilir. Alıcıya garanti başlangıcı gibi bilgiler
+                WhatsApp’tan gönderilebilir. Carileriniz ekstrelerini diledikleri zaman inceleyip
+                Excel’e aktarabilir.
               </p>
               <figure class="shot" aria-label="Garanti talep onay kuyruğu — temsili arayüz">
                 <div class="ui ui--desk ui--onay" aria-hidden="true">
@@ -452,8 +435,8 @@
         <div class="wrap">
           <img src="/images/illust-field-road.jpg" alt="Tarla ve yolun ince bir mavi hatla bağlanması" />
           <p>
-            Çekirdek iş aynı: numarası olan ürün, yetkili ağ, garanti, bakım, parça. Bu yüzden tarım
-            araçlarında da duruyor.
+            Numarası olan ürün, yetkili ağ, garanti, bakım ve parça.
+            Çekirdek iş aynı; bu yüzden tarım araçlarında da rahatça çalışıyor.
           </p>
         </div>
       </section>
@@ -464,10 +447,9 @@
             <p class="eyebrow">Özellikler</p>
             <h2>Üretici paneli, bayi portalı ve sipariş ekranı</h2>
             <p>
-              Aşağıdakiler slayt maddesi değil; üretici panelinde, bayi portalinde ve sipariş
-              ekranında gerçekten açılan işler. Hangilerinin sizin ağınızda açık olacağı firma
-              ayarıyla seçilir. Şasi geçmişi, kupon, onay kuyruğu, stok katmanları ve Logo
-              bağlantısı da bu listededir.
+              Bunlar sadece slayt maddeleri değil; üretici panelinde, bayi portalında ve sipariş ekranında
+              gerçekten kullanılan işler. Hangilerinin açık olacağını firma ayarlarından seçersiniz.
+              Şasi geçmişi, kupon, onay kuyruğu, stok takibi ve Logo bağlantısı da burada.
             </p>
           </div>
 
@@ -535,8 +517,8 @@
                 <h3>Şasi ile geçmiş</h3>
                 <p>
                   Araç şasi veya seri numarasıyla bulunur. Satış kuponu, bakımlar, garanti talepleri
-                  ve o araca yazılmış parçalar aynı geçmişte durur. Servis “bu araç daha önce ne
-                  gördü?” diye sorduğunda arama çubuğu yeter.
+                  ve kullanılan parçalar aynı geçmişte tutulur. Servis “bu araç daha önce ne gördü?”
+                  diye sorduğunda arama çubuğuna yazmanız yeter.
                 </p>
               </div>
             </article>
@@ -548,8 +530,8 @@
               <div>
                 <h3>Dijital kupon ve belge</h3>
                 <p>
-                  Satıcı ve alıcı kuponu kayıt altındadır. Garanti belgesi ve ücretsiz ilk bakım
-                  kuponu, firmanızın şablonuyla basılır; her markanın evrakı birbirine karışmaz.
+                  Satıcı ve alıcı kuponu sistemde kayıtlıdır. Garanti belgesi ve ücretsiz ilk bakım
+                  kuponu firmanızın şablonuyla hazırlanır; her markanın evrakı kendi formatında kalır.
                 </p>
               </div>
             </article>
@@ -573,7 +555,7 @@
                         <div class="ui__tabs"><b class="is-on">İlk montaj</b><b>Periyodik</b></div>
                         <div class="ui__rows">
                           <div class="ui__row"><em class="mint"></em><b>AR8K2M19</b><b class="w2">Tamam</b></div>
-                          <div class="ui__row"><em></em><b>LX4T11C2</b><b class="w2">Km 1.000</b></div>
+                          <div class="ui__row"><em></em><b>LX4T11C2</b><b class="w2">1.000 Km</b></div>
                           <div class="ui__row"><em class="butter"></em><b>BR9Q30H7</b><b class="w2">Bekler</b></div>
                           <div class="ui__row"><em class="mint"></em><b>MT2P84K1</b><b class="w2">Tamam</b></div>
                         </div>
@@ -585,8 +567,8 @@
               <div>
                 <h3>İlk montaj ve bakım</h3>
                 <p>
-                  İlk montaj ayrı, periyodik bakımlar ayrı fiştir. Bakım periyotları ve km takibi
-                  tanımlıdır. Garanti kapsamı / garanti dışı durumu kupon üzerinden okunur.
+                  İlk montaj ve periyodik bakımlar ayrı fişlerde tutulur. Bakım periyotları ve km takibi
+                  sistemde kayıtlıdır. Garanti durumu da kupon üzerinden görülebilir.
                 </p>
               </div>
             </article>
@@ -598,9 +580,9 @@
               <div>
                 <h3>Garanti talebi ve onay</h3>
                 <p>
-                  Talepte hata tipi, arıza nedeni, talep grubu ve parça listesi vardır. Görsel, ayarı
-                  açıksa video eklenir. Kayıt onay kuyruğuna düşer; üretici onaylamadan veya iptal
-                  etmeden süreç ilerlemez.
+                  Talepte hata tipi, arıza nedeni, talep grubu ve parça listesi yer alır. Görsel, ayar açıksa
+                  video da eklenebilir. Kayıt onay kuyruğuna düşer; üretici onaylamadan veya iptal etmeden
+                  süreç ilerlemez.
                 </p>
               </div>
             </article>
@@ -612,9 +594,8 @@
               <div>
                 <h3>Kullanılmış parça kontrolü</h3>
                 <p>
-                  Aynı araçta daha önce kullanılmış yedek parça, yeni garanti talebine sessizce
-                  yazılamaz. Kontrol açıksa sistem uyarır; devam etmek operatörün açık onayına
-                  bağlıdır.
+                  Aynı araçta daha önce kullanılmış bir yedek parça yeni garanti talebine tekrar eklenemez.
+                  Kontrol açıksa sistem uyarır; devam etmek için operatörün onayı gerekir.
                 </p>
               </div>
             </article>
@@ -648,9 +629,10 @@
               <div>
                 <h3>Stok ve sipariş</h3>
                 <p>
-                  Stok yalnız “var/yok” değil: model, bölge, il ve cari. Fiili ve rezerve ayrılır.
-                  Talep veya bakımdaki parçalar sepete alınır; stokta yoksa ön sipariş kuralınız
-                  varsa o da tutulur. Siparişin sevk ve iptal adımları etkinlik olarak işlenir.
+                  Stok sadece “var/yok” olarak değil; model, bölge, il ve cari bazında takip edilir.
+                  Fiili ve rezerve stok ayrı tutulur. Talep veya bakımdaki parçalar sepete eklenir;
+                  stokta yoksa, ön sipariş kuralınız açıksa siparişe alınır. Sevk ve iptal gibi adımlar da
+                  kayıt altında tutulur.
                 </p>
               </div>
             </article>
@@ -658,13 +640,16 @@
             <article class="cell cell--span3">
               <div class="visual">
                 <img src="/images/illust-message.jpg" alt="" />
+                <span class="visual__logo" aria-hidden="true">
+                  <img src="/images/whatsapp.svg" width="88" height="88" alt="" />
+                </span>
               </div>
               <div>
                 <h3>WhatsApp bildirimi</h3>
                 <p>
-                  Garanti başladığında alıcıya model ve şasi içeren bir mesaj gidebilir. Karşılama
-                  metni firmanızındır. Bu, toplu kampanya kanalı değil; kayıt düştüğünde giden işlem
-                  mesajıdır.
+                  Garanti başladığında alıcıya model ve şasi bilgilerini içeren bir mesaj gönderilebilir.
+                  Karşılama metni firmanıza aittir ve isterseniz markanıza göre düzenlenir. Bu bir kampanya
+                  kanalı değil; garanti kaydı oluştuğunda alıcıya bilgi vermek için gönderilen işlem bildirimidir.
                 </p>
               </div>
             </article>
@@ -676,9 +661,9 @@
               <div>
                 <h3>Firma uyarlaması</h3>
                 <p>
-                  Logo, para birimi (TL, USD, EUR), hangi ekranın bayiye açık olduğu, video
-                  yükleme, ön sipariş, parça kontrolü sizin kaydınızda durur. Ekran terimleri de
-                  değiştirilir. Aynı ürün, başka üreticide başka dilde durur.
+                  Logo, para birimi (TL, USD, EUR), bayiye açık ekranlar, video yükleme, ön sipariş ve
+                  parça kontrolü gibi ayarlar firmanıza göre belirlenir. Ekrandaki terimleri de
+                  değiştirebilirsiniz. Aynı ürün, farklı üreticilerde farklı isimlerle kullanılabilir.
                 </p>
               </div>
             </article>
@@ -694,10 +679,10 @@
                 />
                 <h3>Logo ERP ve ticari sistem</h3>
                 <p>
-                  Yedek parça stok hareketi elle girilebileceği gibi ticari sistem girişi / çıkışı
-                  olarak da işlenebilir. Logo ERP başta olmak üzere kullanılan muhasebe–stok
-                  yazılımına bağlanır. Hızlı Servis Pro o programın yerini almaz; servis ağı ile
-                  ticari stoğu kopuk bırakmamak içindir.
+                  Yedek parça stok hareketleri elle girilebilir veya ticari sistemden işlenebilir.
+                  Başta Logo ERP olmak üzere kullandığınız muhasebe ve stok yazılımlarına bağlanabilir.
+                  Hızlı Servis Pro, bu programların yerine geçmez; servis ağı ile ticari stok arasındaki
+                  bağı kurar.
                 </p>
               </div>
             </article>
@@ -709,9 +694,9 @@
               <div>
                 <h3>Bayi tipleri</h3>
                 <p>
-                  Cari satış, servis, yedek parça veya üçünü birden (3S) olabilir. Yetkiler buna
-                  göre verilir; her nokta her menüyü görmez. Satış carisi kupon keser, servis
-                  talebi açar, yedek parça carisi stoğu görür.
+                  Bayi satış, servis, yedek parça veya üçünü birden (3S) olarak tanımlanabilir.
+                  Yetkiler de buna göre belirlenir; herkes her menüyü görmez. Satış carisi kupon keser,
+                  servis talebi açar, yedek parça carisi stoğu görür.
                 </p>
               </div>
             </article>
@@ -723,11 +708,11 @@
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow">Sektörler</p>
-            <h2>Motosiklette doğmuş, tarım aracında da duruyor</h2>
+            <h2>Motosiklette doğdu, tarım aracında da çalışıyor</h2>
             <p>
-              Ürün bir motosiklet yazılımı olarak doğmuş olsa da çekirdek iş aynı: numarası olan
-              ürün, yetkili ağ, garanti, bakım, parça. Bu yüzden tarım araçlarında da duruyor;
-              benzer disiplini olan üreticiye de giydiriliyor.
+              Motosiklet için geliştirilmiş olsa da yaptığı iş değişmiyor: numarası olan ürün,
+              yetkili ağ, garanti, bakım ve parça takibi. Bu yüzden tarım araçlarında da kullanılıyor;
+              benzer yapıya sahip üreticilere de uyarlanabiliyor.
             </p>
           </div>
 
@@ -745,20 +730,20 @@
                 </button>
               </div>
               <p class="tab-copy" data-tab-panel="iki" id="panel-iki" role="tabpanel" aria-labelledby="tab-iki">
-                Motosiklet, e-bisiklet, scooter. Şasi, motor no, km, ilk bakım kuponu burada doğal
-                durur. Satış noktası kuponu keser, yetkili servis talebi açar, üretici yedek parçayı
-                sevk eder.
+                Motosiklet, e-bisiklet, scooter. Şasi, motor no, km, ilk bakım kuponu gibi bilgiler burada
+                doğal olarak yerini bulur. Satış noktası kuponu keser, yetkili servis talebi açar, üretici
+                yedek parçayı sevk eder.
               </p>
               <p class="tab-copy" data-tab-panel="tarim" id="panel-tarim" role="tabpanel" aria-labelledby="tab-tarim" hidden>
-                Traktör ve tarım makinesinde de şasi/seri, sezonluk bakım ve yaygın yedek parça
-                ihtiyacı vardır. Ağ genellikle il ve bölge dağılımlıdır; stok katmanları bu yüzden
-                bölge ve il bazında tutulabilir. Evrak ve terimler tarım markasının diline çekilir.
+                Traktör ve tarım makinelerinde de şasi/seri no, sezonluk bakım ve yedek parça takibi gerekir.
+                Ağ genellikle il ve bölge bazında çalışır; stok da buna göre takip edilebilir. Evrak ve terimler
+                ise tarım markasının kullandığı dile göre uyarlanır.
               </p>
               <p class="tab-copy" data-tab-panel="diger" id="panel-diger" role="tabpanel" aria-labelledby="tab-diger" hidden>
-                Yetkili servisi olan, ürünü tekil numarayla izleyen, garantiyi bayinin inisiyatifine
-                bırakmak istemeyen üreticiler aynı omurgayı kullanır. Demo görüşmesinde sizin evrak,
-                onay ve stok kurallarınıza bakıp neyin açılacağına birlikte karar verilir. Hazır
-                “her sektöre sihirli uyum” iddiası yok.
+                Yetkili servisi olan, ürününü tekil numarayla takip eden ve garanti süreçlerini kontrol altında
+                tutmak isteyen üreticiler aynı altyapıyı kullanabilir. Demo görüşmesinde evrak, onay ve stok
+                kurallarınıza bakıp hangi özelliklerin açılacağına birlikte karar veririz. Her sektöre uyan
+                sihirli bir çözüm iddiamız yok.
               </p>
             </div>
 
@@ -783,11 +768,11 @@
             <p class="eyebrow">Mobil</p>
             <h2>Sahada kupon, bakım ve talep</h2>
             <p>
-              Sahadaki teknisyen veya bayi, üretici paneline girmek zorunda değil. Firmanıza göre
-              giydirilmiş mobil uygulamada kupon, bakım ve talep tarafı yürür; logo ve kimlik sizin
-              markanızdır. Bu, herkese açık bir app store indirmesi değil: kullanan firma için
-              uyarlanır, o ağın insanlarına verilir. Aşağıdaki telefon çerçeveleri temsili
-              arayüzdür; firmanız açılınca menü ve terimler sizin ayarınıza göre durur.
+              Sahadaki teknisyen veya bayi, üretici paneline girmek zorunda değil. Firmanıza özel mobil
+              uygulamada kupon, bakım ve talep işlemleri yapılır; uygulamanın logosu ve kimliği sizin
+              markanıza ait olur. Bu, herkesin indirip kullanacağı bir App Store uygulaması değil;
+              firmanız için hazırlanır ve kendi ağınıza sunulur. Telefonlardaki ekranlar da temsili;
+              firmanız açıldığında menü ve terimler sizin ayarlarınıza göre şekillenir.
             </p>
           </div>
 
@@ -896,9 +881,9 @@
             <div>
               <p class="eyebrow">Ticari yazılım</p>
               <p>
-                Logo ERP başta olmak üzere kullanılan muhasebe–stok yazılımına bağlanır. Hızlı
-                Servis Pro o programın yerini almaz; yedek parça stok hareketi elle veya ticari
-                sistem girişi / çıkışı olarak işlenebilir. Cari ekstre Excel’e alınır.
+                Logo ERP başta olmak üzere kullandığınız muhasebe ve stok yazılımlarına bağlanabilir.
+                Hızlı Servis Pro bu programların yerini almaz; yedek parça stok hareketleri elle veya
+                ticari sistem üzerinden işlenebilir. Cari ekstreyi de Excel’e aktarabilirsiniz.
               </p>
             </div>
             <img
@@ -918,11 +903,11 @@
             <p class="eyebrow">Çalışma alanı</p>
             <h2>Her üretici ayrı firmadır</h2>
             <p>
-              Bir markanın kuponları, stokları ve bayileri diğerinin ekranına düşmez. Yetki kırılımı
-              var: kim onaylar, kim stoğu görür, kim yalnızca kendi carisini işler. İşlem
-              kayıtlarında kimin ne zaman, hangi kayda dokunduğu durur. Planlı bakımda sistem geçici
-              olarak durdurulabilir; bayiler o pencerede içeri alınmaz. Bunlar pazarlama rozeti
-              değil, günlük işletme ihtiyacı.
+              Bir markanın kuponları, stokları ve bayileri diğerinin ekranına düşmez. Yetkiler de ayrıdır:
+              kim onaylar, kim stoğu görür, kim yalnızca kendi carisini işler. İşlem kayıtlarında kimin,
+              ne zaman, hangi kayda işlem yaptığı tutulur. Planlı bakım sırasında sistem geçici olarak
+              kapatılabilir; bu sürede bayiler giriş yapamaz. Bunlar pazarlama özelliği değil, günlük
+              işin gerektirdiği şeyler.
             </p>
           </div>
         </div>
@@ -935,10 +920,10 @@
               <p class="eyebrow">Demo talebi</p>
               <h2>Kuruluma bakmadan kullanıcı açılmıyor</h2>
               <p>
-                Siteden kayıt olunmuyor; kart da istenmiyor. Firmanızın ağ yapısına, mevcut evraka
-                ve Logo veya benzeri ticari yazılım kullanıp kullanmadığınıza göre bir demo
-                planlıyoruz. Uygunsa çalışma alanı açılır, mobil kimliği ve belge şablonları size
-                göre ayarlanır.
+                Siteden kayıt olunmuyor, kart bilgisi de istenmiyor. Önce firmanızın ağ yapısına,
+                mevcut evraklarına ve Logo gibi bir ticari yazılım kullanıp kullanmadığınıza bakıyoruz.
+                Uygunsa çalışma alanınızı açıyor, mobil uygulama ve belge şablonlarını firmanıza göre
+                hazırlıyoruz.
               </p>
             </div>
 
@@ -1009,9 +994,17 @@
               </form>
 
               <div class="thanks" id="demo-thanks" hidden>
-                <h3>Talebiniz iletildi.</h3>
+                <h3>Son adım: e-postayı gönderin</h3>
                 <p>
-                  Dönüşü Olimpus ekibi yapar. Ulaşmazsa yazın:
+                  E-posta uygulamanız açılmalı; açılan pencerede <strong>Gönder</strong>'e basın.
+                  Açılmadıysa aşağıdaki düğmeleri kullanın.
+                </p>
+                <div class="thanks__actions">
+                  <a class="btn btn-primary" id="demo-mail-open" href="#">E-posta uygulamasını aç</a>
+                  <button class="btn btn-secondary" type="button" id="demo-mail-copy">İçeriği kopyala</button>
+                </div>
+                <p class="form-note">
+                  Dönüşü Olimpus ekibi yapar. Ulaşmazsa:
                   <a href="mailto:olimpus@olimpus.com.tr">olimpus@olimpus.com.tr</a>
                 </p>
               </div>
@@ -1025,8 +1018,8 @@
       <div class="wrap">
         <div class="footer-grid">
           <div>
-            <a class="brand" href="#ust">
-              <img src="/images/logo.svg" width="28" height="28" alt="" />
+            <a class="brand" href="#ust" target="_blank" rel="noopener noreferrer">
+              <img src="/images/logo.svg" width="30" height="30" alt="" />
               <span>Hızlı Servis Pro</span>
             </a>
             <p class="lede footer-lede">Hızlı Servis Pro, Olimpus tarafından sunulur.</p>
@@ -1034,24 +1027,48 @@
           <div>
             <h2>Giriş</h2>
             <div class="footer-links">
-              <a href="https://hizliservispro.com/panel">Üretici paneli</a>
-              <a href="https://hizliservispro.com/bayi">Bayi portalı</a>
-              <a href="https://hizliservispro.com/siparis">Sipariş</a>
+              <a href="https://hizliservispro.com/panel" target="_blank" rel="noopener noreferrer">Üretici paneli</a>
+              <a href="https://hizliservispro.com/bayi" target="_blank" rel="noopener noreferrer">Bayi portalı</a>
+              <a href="https://hizliservispro.com/siparis" target="_blank" rel="noopener noreferrer">Sipariş</a>
             </div>
           </div>
           <div>
             <h2>İletişim</h2>
             <div class="footer-links">
-              <a href="mailto:olimpus@olimpus.com.tr">olimpus@olimpus.com.tr</a>
-              <a href="#demo">Demo talep et</a>
+              <a href="mailto:olimpus@olimpus.com.tr" target="_blank" rel="noopener noreferrer">olimpus@olimpus.com.tr</a>
+              <a href="#demo" target="_blank" rel="noopener noreferrer">Demo talep et</a>
             </div>
           </div>
         </div>
         <p class="legal">
-          <span>© 2026</span>
-          <span>KVKK metni yakında</span>
+          <span class="legal__copy">
+            <span>© 2026</span>
+            <a
+              class="legal__olimpus"
+              href="https://www.olimpus.com.tr"
+              aria-label="Olimpus"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+          </span>
+          <a href="https://www.olimpus.com.tr/gizlilik-politikasi/" target="_blank" rel="noopener noreferrer">KVKK ve Gizlilik Politikası</a>
         </p>
       </div>
     </footer>
+
+    <div class="login__menu" id="login-menu" hidden>
+      <a href="https://hizliservispro.com/panel" target="_blank" rel="noopener noreferrer">
+        Üretici paneli
+        <small>/panel</small>
+      </a>
+      <a href="https://hizliservispro.com/bayi" target="_blank" rel="noopener noreferrer">
+        Bayi portalı
+        <small>/bayi</small>
+      </a>
+      <a href="https://hizliservispro.com/siparis" target="_blank" rel="noopener noreferrer">
+        Sipariş
+        <small>/siparis</small>
+      </a>
+    </div>
   </body>
 </html>

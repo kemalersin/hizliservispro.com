@@ -1,12 +1,60 @@
 const header = document.querySelector(".site-header");
 const menuBtn = document.querySelector(".menu-toggle");
-const logins = [...document.querySelectorAll(".login")];
+const loginMenu = document.getElementById("login-menu");
+const loginBtns = [...document.querySelectorAll(".login__btn")];
+let openLoginBtn = null;
 const tabs = [...document.querySelectorAll(".tab")];
 const form = document.querySelector("#demo-form");
 const thanks = document.querySelector("#demo-thanks");
+const thanksMailOpen = document.querySelector("#demo-mail-open");
+const thanksMailCopy = document.querySelector("#demo-mail-copy");
 const copyBtn = document.querySelector("[data-copy-mail]");
 
 const MAIL = "olimpus@olimpus.com.tr";
+let lastDemoMail = null;
+
+function buildDemoMail(data) {
+  const lines = [
+    `Ad soyad: ${data.get("ad")}`,
+    `Firma: ${data.get("firma")}`,
+    `Telefon: ${data.get("telefon")}`,
+    `E-posta: ${data.get("eposta")}`,
+    `Sektör: ${data.get("sektor")}`,
+    `Kullandığınız ticari yazılım: ${data.get("ticari")}`,
+    "",
+    data.get("mesaj") || "",
+  ];
+  const subject = `Demo talebi — ${data.get("firma")}`;
+  const body = lines.join("\n");
+  return {
+    subject,
+    body,
+    href: `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+    plain: `Alıcı: ${MAIL}\nKonu: ${subject}\n\n${body}`,
+  };
+}
+
+function openMailto(href) {
+  const link = document.createElement("a");
+  link.href = href;
+  link.rel = "noopener noreferrer";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+}
+
+async function copyText(text, button, doneLabel = "Kopyalandı") {
+  const original = button.textContent;
+  try {
+    await navigator.clipboard.writeText(text);
+    button.textContent = doneLabel;
+    window.setTimeout(() => {
+      button.textContent = original;
+    }, 1800);
+  } catch {
+    window.prompt("Metni kopyalayın", text);
+  }
+}
 
 function onScroll() {
   header?.classList.toggle("is-scrolled", window.scrollY > 8);
@@ -74,52 +122,84 @@ function setupReveal() {
 
 setupReveal();
 
+function setMenuOpen(open) {
+  header?.classList.toggle("is-open", open);
+  menuBtn?.setAttribute("aria-expanded", String(open));
+  menuBtn?.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
+}
+
 menuBtn?.addEventListener("click", () => {
-  const open = header.classList.toggle("is-open");
-  menuBtn.setAttribute("aria-expanded", String(open));
+  setMenuOpen(!header.classList.contains("is-open"));
 });
 
 document.querySelectorAll('.nav-links a, .nav-actions .btn-primary').forEach((link) => {
   link.addEventListener("click", () => {
-    header.classList.remove("is-open");
-    menuBtn?.setAttribute("aria-expanded", "false");
+    setMenuOpen(false);
   });
 });
 
-function setLogin(login, open) {
-  const btn = login?.querySelector(".login__btn");
-  const menu = login?.querySelector(".login__menu");
-  if (!btn || !menu) return;
-  menu.hidden = !open;
-  btn.setAttribute("aria-expanded", String(open));
+function positionLoginMenu(btn) {
+  if (!loginMenu || !btn) return;
+  const rect = btn.getBoundingClientRect();
+  loginMenu.style.top = `${rect.bottom + 10}px`;
+  loginMenu.style.right = `${window.innerWidth - rect.right}px`;
 }
 
-function closeAllLogins(except) {
-  logins.forEach((login) => {
-    if (login !== except) setLogin(login, false);
-  });
+function setLoginOpen(btn, open) {
+  if (!loginMenu || !btn) return;
+  if (open) {
+    openLoginBtn = btn;
+    positionLoginMenu(btn);
+    loginMenu.hidden = false;
+    loginBtns.forEach((other) => {
+      other.setAttribute("aria-expanded", String(other === btn));
+    });
+    return;
+  }
+
+  btn.setAttribute("aria-expanded", "false");
+  if (openLoginBtn === btn) {
+    loginMenu.hidden = true;
+    openLoginBtn = null;
+  }
 }
 
-logins.forEach((login) => {
-  const btn = login.querySelector(".login__btn");
-  const menu = login.querySelector(".login__menu");
-  btn?.addEventListener("click", (event) => {
+function closeLoginMenu() {
+  loginBtns.forEach((btn) => setLoginOpen(btn, false));
+  openLoginBtn = null;
+}
+
+loginBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
     event.stopPropagation();
-    const willOpen = Boolean(menu?.hidden);
-    closeAllLogins(login);
-    setLogin(login, willOpen);
+    const isOpen = !loginMenu.hidden && openLoginBtn === btn;
+    closeLoginMenu();
+    if (!isOpen) setLoginOpen(btn, true);
   });
 });
 
 document.addEventListener("click", (event) => {
-  if (!event.target.closest(".login")) closeAllLogins();
+  if (!event.target.closest(".login__btn") && !event.target.closest("#login-menu")) {
+    closeLoginMenu();
+  }
+});
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (openLoginBtn && !loginMenu.hidden) positionLoginMenu(openLoginBtn);
+  },
+  { passive: true },
+);
+
+window.addEventListener("resize", () => {
+  if (openLoginBtn && !loginMenu.hidden) positionLoginMenu(openLoginBtn);
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    closeAllLogins();
-    header?.classList.remove("is-open");
-    menuBtn?.setAttribute("aria-expanded", "false");
+    closeLoginMenu();
+    setMenuOpen(false);
   }
 });
 
@@ -158,31 +238,20 @@ if (tabs[0]) activateTab(tabs[0].dataset.tab);
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
-  const lines = [
-    `Ad soyad: ${data.get("ad")}`,
-    `Firma: ${data.get("firma")}`,
-    `Telefon: ${data.get("telefon")}`,
-    `E-posta: ${data.get("eposta")}`,
-    `Sektör: ${data.get("sektor")}`,
-    `Kullandığınız ticari yazılım: ${data.get("ticari")}`,
-    "",
-    data.get("mesaj") || "",
-  ];
-  const subject = `Demo talebi — ${data.get("firma")}`;
-  const href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-  window.location.href = href;
+  lastDemoMail = buildDemoMail(data);
+
+  openMailto(lastDemoMail.href);
+
+  if (thanksMailOpen) thanksMailOpen.href = lastDemoMail.href;
   form.hidden = true;
   if (thanks) thanks.hidden = false;
 });
 
-copyBtn?.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(MAIL);
-    copyBtn.textContent = "Kopyalandı";
-    window.setTimeout(() => {
-      copyBtn.textContent = MAIL;
-    }, 1800);
-  } catch {
-    window.prompt("E-postayı kopyalayın", MAIL);
-  }
+thanksMailCopy?.addEventListener("click", () => {
+  if (!lastDemoMail || !thanksMailCopy) return;
+  copyText(lastDemoMail.plain, thanksMailCopy);
+});
+
+copyBtn?.addEventListener("click", () => {
+  copyText(MAIL, copyBtn, "Kopyalandı");
 });
